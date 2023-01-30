@@ -7,5 +7,26 @@
     "express-session": "^1.17.3",
     "mysql2": "^3.0.1",
     "sequelize": "^6.28.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seeds/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "name": "tech-blog-2.0",
+  "description": "Hi this is my techblogg",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craftersol728/Tech-Blog-2.0.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/craftersol728/Tech-Blog-2.0/issues"
+  },
+  "homepage": "https://github.com/craftersol728/Tech-Blog-2.0#readme"
 }
