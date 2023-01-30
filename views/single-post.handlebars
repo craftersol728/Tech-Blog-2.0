@@ -1,0 +1,27 @@
+{{#with post}}
+  <div class="post-info">
+    <a href="/post/{{id}}">{{title}}</a>
+    <p class="meta">By {{user.username}} on {{format_date created_at}}</p>
+    <p class="meta">
+      <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    </p>
+  </div>
+{{/with}}
+
+{{#if loggedIn}}
+  <form class="comment-form">
+    <div>
+      <input type="text" name="comment-body"></input>
+    </div>
+
+    <div>
+      <button type="submit">Add Amazing Comment</button>
+    </div>
+  </form>
+{{/if}}
+
+{{> comments post.comments}}
+
+{{#if loggedIn}}
+  <script src="/javascript/comment.js"></script>
+{{/if}}

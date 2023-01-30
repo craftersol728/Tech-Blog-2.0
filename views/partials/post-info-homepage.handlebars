@@ -1,0 +1,16 @@
+<article class="post">
+  <div class="title">
+    <a href="/post/{{id}}">{{title}}</a>
+  </div>
+  <div class="meta">
+    by {{user.username}} on {{format_date created_at}}
+  </div>
+
+  <div class="meta">
+    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+  </div>
+</article>
+
+<!--This code is an example of a template written in a templating language that uses double curly braces as placeholders for dynamic data. The data is populated at runtime based on the values passed to the template.
+
+It defines a template for a blog post and displays its title, author, creation date, and the number of comments. The post's title is a link to the post's detail page, which is identified by its ID. The author's name is taken from the "username" field of the "user" object, and the creation date is formatted and displayed using the "created_at" field. The number of comments is displayed and linked to the post's detail page, and the word "comment" is pluralized based on the number of </comments>

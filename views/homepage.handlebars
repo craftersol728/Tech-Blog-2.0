@@ -1,0 +1,11 @@
+<ol class="post-list">
+  {{#each posts as |post|}}
+  <li>
+    {{> post-info-homepage post }}
+  </li>
+  {{/each}}
+</ol>
+
+<!--The code is written in Handlebars, a templating language. It defines an ordered list, where for each post in the posts array, it includes a post-info-homepage partial, which displays information about the post, inside a list item element.
+
+So it will generate an ordered list of post information, where each post is displayed in a separate list item.-->

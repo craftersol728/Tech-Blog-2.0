@@ -1,0 +1,37 @@
+<section>
+  <h2>Create New Post here！</h2>
+
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Title!</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <label for="post-content">Post Content!</label>
+      <textarea name="post-content"></textarea>
+    </div>
+    <button type="submit" class="btn">Create!</button>
+  </form>
+</section>
+
+{{#if posts.length}}
+<section>
+  <h2>Your Posts Here！</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post！</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-post.js"></script>
+
+<!--This code block is a Handlebars template for creating a new post and displaying a list of posts. The template contains two sections. The first section includes a form with two inputs: a title input and a text area for the post content. When the "Create" button is clicked, the form data is submitted and the new post is created.
+
+The second section displays a list of the user's posts, with the title and some information about each post. If there are no posts, this section is not displayed. The list of posts is generated using a Handlebars each loop, and each post is displayed using the "post-info" partial template. If a post is edited, the user can click the "Edit Post" link to navigate to the edit form for that post.
+
+At the end of the template, there is a script tag that includes a JavaScript file named "add-post.js". This file likely contains the logic for submitting the new post form and creating a new post.
