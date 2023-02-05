@@ -3,6 +3,7 @@
     "bcrypt": "^5.1.0",
     "connect-session-sequelize": "^7.1.5",
     "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "express-handlebars": "^6.0.7",
     "express-session": "^1.17.3",
     "mysql2": "^3.0.1",
@@ -17,7 +18,6 @@
   "description": "Hi this is my techblogg",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/craftersol728/Tech-Blog-2.0.git"
