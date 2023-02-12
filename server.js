@@ -21,7 +21,12 @@ app.set('view engine', 'handlebars');
 
 const sess = {
   secret: 'Super secret secret',
-  cookie: { maxAge: 180 },
+  cookie: {
+    maxAge: 300000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
   rolling: true,
   resave: true,
   saveUninitialized: true,
