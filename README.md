@@ -1,33 +1,48 @@
-# Tech-Blog-2.0GIVEN a CMS-style blog site
-WHEN I visit the site for the first time
-THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
-WHEN I click on the homepage option
-THEN I am taken to the homepage
-WHEN I click on any other links in the navigation
-THEN I am prompted to either sign up or sign in
-WHEN I choose to sign up
-THEN I am prompted to create a username and password
-WHEN I click on the sign-up button
-THEN my user credentials are saved and I am logged into the site
-WHEN I revisit the site at a later time and choose to sign in
-THEN I am prompted to enter my username and password
-WHEN I am signed in to the site
-THEN I see navigation links for the homepage, the dashboard, and the option to log out
-WHEN I click on the homepage option in the navigation
-THEN I am taken to the homepage and presented with existing blog posts that include the post title and the date created
-WHEN I click on an existing blog post
-THEN I am presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
-WHEN I enter a comment and click on the submit button while signed in
-THEN the comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created
-WHEN I click on the dashboard option in the navigation
-THEN I am taken to the dashboard and presented with any blog posts I have already created and the option to add a new blog post
-WHEN I click on the button to add a new blog post
-THEN I am prompted to enter both a title and contents for my blog post
-WHEN I click on the button to create a new blog post
-THEN the title and contents of my post are saved and I am taken back to an updated dashboard with my new blog post
-WHEN I click on one of my existing posts in the dashboard
-THEN I am able to delete or update my post and taken back to an updated dashboard
-WHEN I click on the logout option in the navigation
-THEN I am signed out of the site
-WHEN I am idle on the site for more than a set time
-THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
+## Tech-Blog-2.0
+Tech-Blog-2.0 is a web application that allows users to create and publish blog posts about technology topics. This is an updated version of the original Tech-Blog application, with new features and improvements.
+
+## Features
+Some of the key features of Tech-Blog-2.0 include:
+
+    User authentication: Users can create an account, log in, and log out of the application.
+    Blog post creation: Users can create new blog posts, including a title and content.
+    Blog post editing: Users can edit their existing blog posts.
+    Blog post deletion: Users can delete their existing blog posts.
+    Commenting: Users can comment on blog posts and view comments made by other users.
+## Getting Started
+To run Tech-Blog-2.0 on your own system, follow these steps:
+
+1.Clone the repository to your local machine using git clone https://github.com/craftersol728/Tech-Blog-2.0.git
+
+2.Navigate to the root directory of the project using cd Tech-Blog-2.0
+
+3.Install the required dependencies using npm install
+
+4.Set up the database by running mysql -u root -p and then source db/schema.sql
+
+
+5.Create a .env file in the root directory of the project, with the following contents:
+
+DB_NAME='tech_blog_db'
+DB_USER='root'
+DB_PW='<your mysql password>'
+
+## Technologies Used
+Tech-Blog-2.0 is built using the following technologies:
+
+Node.js
+Express.js
+MySQL
+Sequelize ORM
+Handlebars templating engine
+Bootstrap CSS framework
+## Contributing
+Contributions to Tech-Blog-2.0 are welcome! If you would like to contribute, please follow these steps:
+
+Fork the repository
+Create a new branch for your feature or bug fix
+Make your changes and commit them with descriptive commit messages
+Push your changes to your forked repository
+Create a pull request to the main repository
+## License
+Tech-Blog-2.0 is licensed under the MIT license. See the LICENSE file for more information.
