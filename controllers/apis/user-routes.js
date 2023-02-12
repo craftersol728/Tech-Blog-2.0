@@ -39,6 +39,9 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const user = await User.create(req.body);
+
+    console.log(user)
+
     req.session.save(() => {
       req.session.user_id = user.id;
       req.session.username = user.username;
@@ -49,11 +52,14 @@ router.post('/', async (req, res) => {
     console.error(err);
     res.status(500).json({ message: 'Internal server error' });
   }
+  
 });
 
 router.post('/login', async (req, res) => {
   try {
     const user = await User.findOne({ where: { email: req.body.email } });
+
+    console.log(req.body)
 
     if (!user) {
       res.status(400).json({ message: 'No user with that email address!' });
@@ -67,7 +73,8 @@ router.post('/login', async (req, res) => {
           req.session.user_id = user.id;
           req.session.username = user.username;
           req.session.loggedIn = true;
-          res.json({ user, message: 'You are now logged in!' });
+          console.log(req.session);
+          res.status(200).json({ user, message: 'You are now logged in!' });
         });
       }
     }
