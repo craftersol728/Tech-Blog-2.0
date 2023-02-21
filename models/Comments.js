@@ -40,5 +40,5 @@ Comment.init(
     modelName: 'comment'
   }
 );
-
+//Jacob is awsome
 module.exports = Comment;
