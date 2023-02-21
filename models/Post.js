@@ -1,7 +1,7 @@
 const { DataTypes, Model } = require("sequelize");
 const sequelize = require("../config/connection");
 const User = require("./User");
-
+const moment = require('moment');
 class Post extends Model {};
 
 Post.init({
@@ -28,6 +28,10 @@ Post.init({
       model: "user",
       key: "id"
     }
+  },
+  created_at: {
+    type: DataTypes.DATE,
+    default: moment().format('')
   }
 }, {
   sequelize,
@@ -35,5 +39,7 @@ Post.init({
   freezeTableName: true,
   underscored: true
 });
+
+
 
 module.exports = Post;
